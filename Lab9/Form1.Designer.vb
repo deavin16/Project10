@@ -29,6 +29,7 @@ Partial Class Form1
         Me.Send_Files = New System.Windows.Forms.Button()
         Me.Play = New System.Windows.Forms.Button()
         Me.Pause = New System.Windows.Forms.Button()
+        Me.Stop1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Show_Files
@@ -67,25 +68,35 @@ Partial Class Form1
         '
         Me.Play.Location = New System.Drawing.Point(289, 272)
         Me.Play.Name = "Play"
-        Me.Play.Size = New System.Drawing.Size(103, 29)
+        Me.Play.Size = New System.Drawing.Size(75, 29)
         Me.Play.TabIndex = 3
         Me.Play.Text = "Play"
         Me.Play.UseVisualStyleBackColor = True
         '
         'Pause
         '
-        Me.Pause.Location = New System.Drawing.Point(434, 272)
+        Me.Pause.Location = New System.Drawing.Point(376, 272)
         Me.Pause.Name = "Pause"
-        Me.Pause.Size = New System.Drawing.Size(103, 29)
+        Me.Pause.Size = New System.Drawing.Size(75, 29)
         Me.Pause.TabIndex = 4
         Me.Pause.Text = "Pause"
         Me.Pause.UseVisualStyleBackColor = True
+        '
+        'Stop1
+        '
+        Me.Stop1.Location = New System.Drawing.Point(462, 272)
+        Me.Stop1.Name = "Stop1"
+        Me.Stop1.Size = New System.Drawing.Size(75, 29)
+        Me.Stop1.TabIndex = 5
+        Me.Stop1.Text = "Stop"
+        Me.Stop1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Stop1)
         Me.Controls.Add(Me.Pause)
         Me.Controls.Add(Me.Play)
         Me.Controls.Add(Me.Send_Files)
@@ -103,4 +114,5 @@ Partial Class Form1
     Friend WithEvents Send_Files As Button
     Friend WithEvents Play As Button
     Friend WithEvents Pause As Button
+    Friend WithEvents Stop1 As Button
 End Class

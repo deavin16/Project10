@@ -10,6 +10,7 @@ Public Class Form1
     Dim SendSelectedFile As Integer = 4
     Dim SendPlay As Integer = 5
     Dim SendPause As Integer = 6
+    Dim SendStop As Integer = 7
 
     Dim ShowFilesStr As String = "1"
     Dim StartFileListStr As String = "2"
@@ -17,6 +18,7 @@ Public Class Form1
     Dim SendSelectedFileStr As String = "4"
     Dim SendPlayStr As String = "5"
     Dim SendPauseStr As String = "6"
+    Dim SendStopStr As String = "7"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Try to open the seial port 
@@ -121,6 +123,13 @@ Public Class Form1
         If SerialPort1.IsOpen Then
 
             SerialPort1.Write(SendPauseStr, 0, 1)
+        End If
+    End Sub
+
+    Private Sub Stop1_Click(sender As Object, e As EventArgs) Handles Stop1.Click
+        If SerialPort1.IsOpen Then
+
+            SerialPort1.Write(SendStopStr, 0, 1)
         End If
     End Sub
 End Class
